@@ -42,10 +42,19 @@ h2{
     margin-bottom: 25px;
     letter-spacing: 1px;
 }
+.input-box .fa-eye,
+.input-box .fa-eye-slash{
+    left: auto;
+    right: 15px;
+    cursor: pointer;
+}
+
+
 
 .input-box{
     position: relative;
     margin-bottom: 25px;
+    
 }
 
 .input-box input{

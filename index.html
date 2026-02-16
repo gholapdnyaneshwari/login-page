@@ -18,13 +18,31 @@
         </div>
         <div class="input-box">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Password" id="password">
+            <i class="fa-regular fa-eye-slash" id="toggle" onclick="toggle()"></i>
         </div>
         <button class="btn">Login</button>
         <div class="btn-text">
             <p>Dont have any account? <a href="#">Create Now</a></p>
         </div>
     </div>
+    <script>
+        const passwordElement = document.getElementById("password");
+        const toggleElement = document.getElementById("toggle");
+
+        toggleElement.addEventListener("click", function () {
+            if (passwordElement.type === "password") {
+                passwordElement.type = "text";
+                toggleElement.classList.remove("fa-eye-slash");
+                toggleElement.classList.add("fa-eye");
+            } else {
+                passwordElement.type = "password";
+                toggleElement.classList.remove("fa-eye");
+                toggleElement.classList.add("fa-eye-slash");
+            }
+        });
+
+    </script>
 </body>
 
 </html>
